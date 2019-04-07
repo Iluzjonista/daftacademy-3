@@ -1,0 +1,17 @@
+body{
+    height: 100vh;
+    position: relative;
+    background: rgb(186, 247, 136);
+}
+.watch{
+    border-style: dotted;
+    position: absolute;
+    padding: 0.4rem 1rem;
+    top:50%;
+    left:50%;
+    font-size:3rem;
+    margin: 0;
+    background: rgb(203, 243, 170);
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}

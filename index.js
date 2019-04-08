@@ -6,9 +6,6 @@ const getActualTime = () => {
     h = now.getHours() % 12;
 };
 const watch = document.querySelector(".watch");
-const actualTime = () => {
-    watch.textContent = `${h.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}:${sec.toString().padStart(2, "0")}`;
-};
 function* incSec(){
     while(true)
         yield sec++;
@@ -36,6 +33,6 @@ const start = setInterval(() => {
             genHour.next().value;
             if(h===12)
                 h=0; }} 
-                actualTime(); 
+                watch.textContent = `${h.toString().padStart(2, "0")}:${min.toString().padStart(2, "0")}:${sec.toString().padStart(2, "0")}`;
             }, 1000)
                      
